@@ -168,7 +168,7 @@ router.post('/signup', (req, res) => {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,
-      password: bcrypt.hashSync(req.body.password, 10)
+      password: bcrypt.hashSync(req.body.password, 13)
       /*
       - sending plain text passwords to a database is extremely insecure, so we need to use something like bcryptjs to send a hashed password to our database
       - hashing: process of storing passwords in hashed form. This guards against the possibilty of someone gaining unauthorized access to our database and retrieving user passwords.
@@ -227,7 +227,7 @@ router.post('/signin', (req, res) => {
                       sessionToken: token
                   })
               } else {
-                  res.status(502).send({ error: 'bad gateway' }) // 502 server error response code idicates that the server, while acting as a gateway, received an invalid response
+                  res.status(502).send({ error: 'bad gateway' }) // 502 server error response code indicates that the server, while acting as a gateway, received an invalid response
               }
           })
       } else {

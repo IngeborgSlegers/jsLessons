@@ -37,3 +37,5 @@ const objectCopier = (copyObj) => {
 let newStudent = objectCopier(student);
 console.log(student);
 console.log(newStudent)
+
+

@@ -277,6 +277,7 @@ PIE API DEBUGGING CHALLENGE
 */
 
 // Broken code:
+// 3 breaks in each.
 // router.get('/name', (req, res) => {
 //   Pie.findone({ where: { nameOfPie: req.params.nameOfPie }})
 //     .then(pie => res.status(200).json(pie))

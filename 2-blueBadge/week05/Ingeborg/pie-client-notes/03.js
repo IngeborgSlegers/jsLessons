@@ -132,7 +132,7 @@ const pumpkinPie = {
 }
 
 // TO
-const tryPies = [
+const hardCodedPies = [
     {
         nameOfPie: 'Pumpkin',
         baseOfPie: 'Pumpkin puree',
@@ -164,7 +164,7 @@ const tryPies = [
     - we need to change the variable we're passing into our Pie components prop of tryPie since we changed our variable name
 */
 
-{/* <Pie tryPie={tryPies} /> */}
+{/* <Pie pie={pieInfo} /> */}
 
 /*
     - we fixed our break, but we are no longer seeing our tryPie being displayed to screen since we now have multiple pie objects inside of an array.
@@ -184,6 +184,33 @@ import './Pies.css';
 import {Card} from 'reactstrap';
 import Pie from './Pie/Pie';
 
+const hardCodedPies = [
+  {
+      nameOfPie: 'Pumpkin',
+      baseOfPie: 'Pumpkin puree',
+      crust: 'Pastry',
+      timeToBake: 50,
+      servings: 8,
+      rating: 4.2
+  },
+  {
+      nameOfPie: 'Apple',
+      baseOfPie: 'Jam',
+      crust: 'Graham cracker',
+      timeToBake: 30,
+      servings: 6,
+      rating: 4.0
+  },
+  {
+      nameOfPie: 'Chocolate',
+      baseOfPie: 'Pudding',
+      crust: 'Pastry',
+      timeToBake: 20,
+      servings: 8,
+      rating: 5.0
+  }
+]
+
 const Pies = () => {
 
   const [pies, setPies] = useState([]);
@@ -197,44 +224,22 @@ const Pies = () => {
   //   rating: 4.2
   // }
 
-  const tryPies = [
-    {
-        nameOfPie: 'Pumpkin',
-        baseOfPie: 'Pumpkin puree',
-        crust: 'Pastry',
-        timeToBake: 50,
-        servings: 8,
-        rating: 4.2
-    },
-    {
-        nameOfPie: 'Apple',
-        baseOfPie: 'Jam',
-        crust: 'Graham cracker',
-        timeToBake: 30,
-        servings: 6,
-        rating: 4.0
-    },
-    {
-        nameOfPie: 'Chocolate',
-        baseOfPie: 'Pudding',
-        crust: 'Pastry',
-        timeToBake: 20,
-        servings: 8,
-        rating: 5.0
-    }
-]
+{/* !!! NEW CODE !!!*/}
+  const pieRows = () => {
+    return hardCodedPies.map((pieInfo, index) => {
+      return (
+        <Card key={index} className="cardName">
+          <Pie pie={pieInfo} />
+        </Card>
+      )
+    })
+  }
 
   return(
     <div className="mainDiv">
         {/* !!! NEW CODE !!!*/}
       {
-        tryPies.map((pie, index) => {
-          return (
-            <Card key={index} className="cardName">
-              <Pie tryPie={pie} />
-            </Card>
-          )
-        })
+        pieRows()
       }
     </div>
   )

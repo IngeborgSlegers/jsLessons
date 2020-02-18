@@ -78,7 +78,7 @@ import React, {useState} from 'react';
 const [sessionToken, setSessionToken] = useState(undefined);
 console.log(sessionToken);
 /*
-    - useState uses something called array destructuring. We'll breifly cover array destructuring here in a minute to familiarize you with it, but we'll come back to it later this week. Right now the focus is on React
+    - useState uses something called array destructuring. We'll briefly cover array destructuring here in a minute to familiarize you with it, but we'll come back to it later this week. Right now the focus is on React
     - useState always accepts two values:
         1. a state variable that's based upon the initial value we pass into useState - in this case that's undefined.
             let sessionToken = undefined;

@@ -12,7 +12,7 @@ BRONZE CHALLENGE
 SILVER CHALLENGE
   Do the Bronze Challenge, but add a second input field.  Make sure that its value is also
   managed by state using 2-way binding.  Make an h1 tag below these input fields that shows
-  the value of the input field which has the longer text.  Your page may look like the below:
+  the value of the input field which has the longer text. You'll need to write some logic to check which value is longer. Your page may look like the below:
 
   [this is some text]
   [this is some longer text]
@@ -20,5 +20,12 @@ SILVER CHALLENGE
 
 GOLD CHALLENGE
   
-  Create a way for the header tag to alert some one that they need to type something into the inputs to engage with out logic, while keeping the ability to show the value of the longer input in the <h2>. You may need to tear out the initial set up for the conditional rendering it make this work. 
+  Create a way for the header tag to alert someone that they need to type something into the inputs to engage without logic, while keeping the ability to show the value of the longer input in the <h2>. You may need to tear out the initial set up for the conditional rendering it make this work. 
+*/
+
+/* BRONZE
+
+const [textOne, setTextOne] = useState('');
+
+<Input value={textOne} onChange={(event) => {console.log(event.target.value); setTextOne(event.target.value)}} />
 */

@@ -5,6 +5,8 @@
 DAY ONE REACT CHALLENGE
 *******************/
 
+// https://github.com/AlecxMoritz/react-challenges-starter
+
 /*
 BRONZE LEVEL:
 Inside the DayOne component, initialize three state values ( using useState() ), platform, generation, and maker, as well as the methods to update them. Give them a default value of 'Playstation', 3, and 'Sony' respectively. 

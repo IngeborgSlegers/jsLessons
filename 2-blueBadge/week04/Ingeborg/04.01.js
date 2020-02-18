@@ -55,6 +55,10 @@ console.log(newObject, 'Changed Object');
 
 // ***************************************************************************
 
+
+// ***************************************************************************
+
+
 /**************************
 POSTGRES AND PGADMIN INSTALL
 **************************/
@@ -84,7 +88,7 @@ POSTGRES AND PGADMIN INSTALL
           cd into server
           npm init => explain what package.json is doing 
 
-- npm can manage packages that are local dependencies of a particular project, as as globally-install JavaScript tools. When used as a dependedncy manager for a local project, npm can install, in one commane, all the dependencies of a project through the package.json file.
+- npm can manage packages that are local dependencies of a particular project, as as globally-install JavaScript tools. When used as a dependedncy manager for a local project, npm can install, in one command, all the dependencies of a project through the package.json file.
 
 - The package.json is a file that houses information on our project. It lists the packages our project depends on (dependencies), specifies versions of a package our project is using, and makes our build reproducible - making it easier to share with other developers.
 
@@ -163,7 +167,7 @@ app.listen(3000, () => console.log('app is listening on 3000')); // This is star
 - when the server is started or ran, Node automatically loads any environment variables into what's called 'process.env' to make them available to the application.
 
 - to use .env within our project, we need to install it:
-            .env: npm install dotenv
+         *   .env: npm install dotenv
 */
 
 // add the following to .env
